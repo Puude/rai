@@ -61,7 +61,7 @@ class ToolRunner(RunnableCallable):
             raise ValueError("Last message is not an AIMessage")
 
         def run_one(call: ToolCall):
-            self.logger.info(f"Running tool: {call['name']}")
+            self.logger.info(f"Running tool: {call['name']}, args: {call['args']}")
             artifact = None
 
             try:
